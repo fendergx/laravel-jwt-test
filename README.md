@@ -28,7 +28,7 @@ https://www.youtube.com/watch?v=N1QQ1qQP0wo
 * configurar la conexión a la base de datos en el archivo .env
 * posteriormente se instalan las librerias y se generan las llaves.
 
-```
+```BASH
 composer install
 php artisan key:generate
 php artisan jwt:secret
@@ -41,16 +41,20 @@ php artisan serve
 ```
 
 Para probar dentro de insomnia y Postman debe de configurar la autenticacion
-POST - http://127.0.0.1:8000/api/checkin
-dato - JSON 
+* POST - http://127.0.0.1:8000/api/checkin
+* dato - JSON 
+
+```JSON
 {
 	"email":"test@test.com",
 	"password":"test.com"
 }
+```
+
 
 para la prueba de usuario:
-GET - http://127.0.0.1:8000/api/user
-Auth: Bearer token
+* GET - http://127.0.0.1:8000/api/user
+* Auth: Bearer token (aca debe colocar el token generado)
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
